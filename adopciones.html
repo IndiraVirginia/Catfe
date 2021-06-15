@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>CATfé</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!----- viewport para apple device-width = ancho pantalla initial-scale es que inicia sin ningún zoom -->
+        <link rel="apple-touch-icon" href="assets/img/apple-icon.png" />
+        <!----- icono para apple y safari -->
+        <link
+          rel="shortcut icon"
+          type="image/x-icon"
+          href="assets/img/favicon.ico"
+        />
+        <!-- Load Require CSS -->
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+        <!-- iconos  -->
+        <link href="assets/css/boxicon.min.css" rel="stylesheet" />
+        <!-- tipo de letra -->
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Nerko+One&family=Ubuntu:ital,wght@0,300;0,400;0,700;1,400&display=swap"
+          rel="stylesheet"
+        />
+        <!-- carga CSS -->
+        <link rel="stylesheet" href="assets/css/estilos.css" />
+      </head>
+      <!-----
+    .text-primary  		azul
+    .text-secondary		gris
+    .text-success		verde
+    .text-danger		rojo
+    .text-warning		amarillo
+    .text-info			celeste
+    .text-light			blanco
+    .text-dark			negro
+    .text-muted			gris oscuro
+    .text-white			gris claro
+    -->
+      <!------------------------------------------------------------------ Fin del  HEAD -->
+      <body>
+        <!-- Header 
+        nav = cuyo propósito es proporcionar enlaces de navegación, ya sea dentro del documento actual 
+        o a otros documentos
+        -->
+    
+        <nav
+          id="main_nav"
+          class="navbar navbar-expand-lg navbar-light bg-white shadow"
+        >
+          <!--navbar-expand-lg = envoltorio para que el navbar se estire en lg
+        navbar-light = texto negro de la letra
+        bg-white = fondo de color blanco
+        -->
+    
+          <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand h1" href="index.html">
+              <!--navbar-brand = clase se utiliza para resaltar la marca o logotipo de su página-->
+              <img
+                class="pr-3"
+                src="/assets/img/kitty.svg"
+                alt="icono-cat-coffee"
+                style="height: 85px; width: auto"
+              />
+              <span class="oscuro h4 font-nerko align-middle">CAT</span
+              ><span class="secundario2 h4 font-nerko align-middle">fé</span></a
+            >
+    
+            <!--	boton de hamburguesa -->
+            <button
+              class="navbar-toggler border-0"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbar-toggler-success"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"> </span>
+            </button>
+            <!------------------------------------------- Opciones del Menu		-->
+            <div
+              class="
+                align-self-center
+                collapse
+                navbar-collapse
+                flex-fill
+                d-lg-flex
+                justify-content-lg-between
+              "
+              id="navbar-toggler-success"
+            >
+              <!-------collapse navbar-collapse= para agrupar y ocultar el contenido de la barra de navegación 
+            por un punto de interrupción principal.
+            flex-fill = obliga a que todos los elementos tengan el mismo tamaño de ancho
+            d-lg-flex = utilidades para crear un contenedor flexbox y transforme los elementos secundarios 
+            directos en elementos flexibles
+            -->
+              <div class="flex-fill mx-xl-5 mb-2">
+                <!--	  mx=para clases que establecen tanto *-lefty*-right-->
+                <ul
+                  class="
+                    nav
+                    navbar-nav
+                    d-flex
+                    justify-content-between
+                    mx-xl-5
+                    text-center text-dark
+                  "
+                >
+                  <!--   .navbar-nav para una navegación ligera y de altura completa 
+                           (incluida la compatibilidad con menús desplegables).-->
+                  <li class="nav-item">
+                    <a
+                      class="nav-link btn-color-nav rounded-pill px-2"
+                      href="index.html"
+                      >Inicio</a
+                    >
+                    <!-- px = padding y mx es el margin 
+                            rounded-pill =genera ese boton con bordes redondeados rounded-circle-->
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link btn-color-nav rounded-pill px-2"
+                      href="nosotros.html"
+                      >Sobre Nosotros</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link btn-color-nav rounded-pill px-2"
+                      href="adopciones.html"
+                      >Adopciones</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link btn-color-nav rounded-pill px-2"
+                      href="donaciones.html"
+                      >Donaciones</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link btn-color-nav rounded-pill px-2"
+                      href="contacto.html"
+                      >Contacto</a
+                    >
+                  </li>
+                </ul>
+              </div>
+    
+              <!---------------------------------------------------------Fin de las opciones del menu
+    ------------------------------------------------------------ Inicio de los iconos del menu-->
+              <div class="navbar align-self-center d-flex">
+                <a class="nav-link" href="#"
+                  ><i class="bx bx-bell bx-sm bx-tada-hover icono-color"></i
+                ></a>
+                <a class="nav-link" href="#"
+                  ><i class="bx bx-cog bx-sm icono-color"></i
+                ></a>
+                <a class="nav-link" href="#"
+                  ><i class="bx bx-user-circle bx-sm icono-color"></i
+                ></a>
+                <!--	https://iconify.design/icon-sets/bx/-->
+              </div>
+            </div>
+          </div>
+        </nav>
+    <!-- Close Header -->
+
+
+    <!-- Start Banner Hero -->
+    <div id="work_banner" class="banner-wrapper bg-light w-100 py-5">
+        <div class="banner-vertical-center-work container text-light d-flex justify-content-center align-items-center py-5 p-0">
+            <div class="banner-content col-lg-8 col-12 m-lg-auto text-center">
+                <h1 class="banner-heading h2 display-3 pb-5 semi-bold-600 typo-space-line-center">CENTRO DE ADOPCIONES</h1>
+                <h3 class="h4 pb-2 regular-400">Enterate de como ser parte del centro de adopciones</h3>
+                <p class="banner-body pb-2 light-300">
+                    Centro de adopciones <a class="text-white" href="http://google.com/" target="_blank">Argentina</a>.
+                    Queremos que aprendas muchas cosas sobre los gatos, por eso preparamos talleres y cursos sobre su comportamiento, temas de salud, comunicación, enriquecimiento ambiental y también cursos sobre el bienestar animal, sus derechos y tenencia responsable.
+                </p>
+               <a href="contacto.html"><button type="submit" class="btn rounded-pill btn-outline-light px-4 me-4 light-300">Consultas</button></a>
+             <a href="nosotros.html"><button type="submit" class="btn rounded-pill bgk-color-s2 text-light px-4 light-300">Quienes Somos</button></a>
+            </div>
+        </div>
+    </div>
+    <!-- End Banner Hero -->
+
+    <section class="bg-light">
+        <div class="container py-5">
+            <div class="row d-flex justify-content-center text-center">
+                <div class="col-lg-2 col-12 text-dark align-items-center">
+                    <img class="w-50" src="/assets/img/kitty-pez.svg" alt="gato-pez">
+                </div>
+                <div class="col-lg-7 col-12 text-dark pt-2">
+                    <h3 class="h4 bold-700">Gatos en adopción</h3>
+                    <p class="regular-400">Conocé los gatos que están listos para se adoptados de tu sucursal más cercana.</p>
+                </div>
+                <div class="col-lg-3 col-12 pt-4">
+                    <a href="#" class="btn btn-dark bold-700 rounded-pill btn-block shadow px-4 py-2">Sucursales</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Start Our Work -->
+    <section class="container py-5">
+        <div class="row justify-content-center my-5">
+            <div class="filter-btns shadow-md rounded-pill text-center col-auto">
+                <a class="filter-btn btn rounded-pill btn-outline-dark shadow border-1 m-md-2 px-md-4 active" data-filter=".project" href="#">Todos</a>
+                <a class="filter-btn btn rounded-pill btn-outline-dark shadow border-1 m-md-2 px-md-4" data-filter=".arg" href="#">Argentina</a>
+                <a class="filter-btn btn rounded-pill btn-outline-dark shadow border-1 m-md-2 px-md-4" data-filter=".esp" href="#">España</a>
+                <a class="filter-btn btn rounded-pill btn-outline-dark shadow border-1 m-md-2 px-md-4" data-filter=".mx" href="#">México</a>
+            </div>
+        </div>
+
+        <div class="row projects gx-lg-5">
+            <a href="#" class="col-sm-6 col-lg-4 text-decoration-none project arg social business">
+                <div class="service-work overflow-hidden card mb-5 mx-5 m-sm-0">
+                    <img class="card-img-top" src="./assets/img/gato1.jpg" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title bold-700 text-dark">Lenwa</h5>
+                        <p class="card-text light-300 text-dark">
+                            Gatita hembra de 8 meses. Vacunas al día-Castrada. <br>
+                            Se adapta a niños y otros animales.
+                        </p>
+                        <span class="text-decoration-none text-a1 regular-400">
+                            Conocé más aquí <i class='bx bxs-hand-right ms-1'></i>
+                        </span>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="col-sm-6 col-lg-4 text-decoration-none project esp social">
+                <div class="service-work overflow-hidden card mx-5 mx-sm-0 mb-5">
+                    <img class="card-img-top" src="./assets/img/gato2.jpg" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title bold-700 text-dark">Suko</h5>
+                        <p class="card-text light-300 text-dark">
+                           Gatito macho de 1 año. Vacunas al día-castrado. <br>
+                           Se adapta a todo tipo de ambiente.
+                        </p>
+                        <span class="text-decoration-none text-a1 regular-400">
+                              Conocé más aquí <i class='bx bxs-hand-right ms-1'></i>
+                          </span>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="col-sm-6 col-lg-4 text-decoration-none project arg business">
+                <div class="service-work overflow-hidden card mx-5 mx-sm-0 mb-5">
+                    <img class="card-img-top" src="./assets/img/gato3.jpg" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title bold-700 text-dark">Asombro</h5>
+                        <p class="card-text light-300 text-dark">
+                            Gatito macho de 7 meses. Vacunas al día-falta castrar<br>
+                           Se adapta a todo tipo de ambiente.
+                        </p>
+                        <span class="text-decoration-none text-a1 regular-400">
+                            Conocé más aquí <i class='bx bxs-hand-right ms-1'></i>
+                        </span>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="col-sm-6 col-lg-4 text-decoration-none project mx business">
+                <div class="service-work overflow-hidden card mx-5 mx-sm-0 mb-5">
+                    <img class="card-img-top" src="./assets/img/gato4.jpg" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title bold-700 text-dark">Blacko</h5>
+                        <p class="card-text light-300 text-dark">
+                            Gato macho de 2 años. Vacunas al día-castrado. <br>
+                            Se adapta a niños pero no a otros animales machos.
+                        </p>
+                        <span class="text-decoration-none text-a1 regular-400">
+                            Conocé más aquí <i class='bx bxs-hand-right ms-1'></i>
+                        </span>
+                    </div>
+                </div>
+            </a>
+            <a href="" class="col-sm-6 col-lg-4 text-decoration-none project mx">
+                <div class="service-work overflow-hidden card mx-5 mx-sm-0 mb-5">
+                    <img class="card-img-top" src="./assets/img/gato5.jpg" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title bold-700 text-dark">Peter y Pan</h5>
+                        <p class="card-text light-300 text-dark">
+                            Gatitos machos de 1 año-1 año/medio. Vacunas al día-castrados. <br>
+                           Se adaptan a todo tipo de ambiente. <br>
+                           Se adoptan juntos.
+                        </p>
+                        <span class="text-decoration-none text-a1 regular-400">
+                            Conocé más aquí <i class='bx bxs-hand-right ms-1'></i>
+                        </span>
+                    </div>
+                </div>
+            </a>
+            <a href="" class="col-sm-6 col-lg-4 text-decoration-none project esp">
+                <div class="service-work overflow-hidden card mx-5 mx-sm-0 mb-5">
+                    <img class="card-img-top" src="./assets/img/gato6.jpg" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title bold-700 text-dark">Naranja</h5>
+                        <p class="card-text light-300 text-dark">
+                           Gata hembra de 3 años. Vacunas al día-castrada. <br>
+                           Se adapta a otros animales pero no a niños.
+                        </p>
+                        <span class="text-decoration-none text-a1 regular-400">
+                            Conocé más aquí <i class='bx bxs-hand-right ms-1'></i>
+                        </span>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="row">
+            <div class="btn-toolbar justify-content-center pb-4" role="toolbar" aria-label="Toolbar with button groups">
+                <div class="btn-group me-2" role="group" aria-label="First group">
+                    <button type="button" class="btn bgk-a2 text-white">Ant.</button>
+                </div>
+                <div class="btn-group me-2" role="group" aria-label="Second group">
+                    <button type="button" class="btn bgk-a1 text-white btn-light">1</button>
+                </div>
+                <div class="btn-group me-2" role="group" aria-label="Second group">
+                    <button type="button" class="btn bgk-a2 text-white btn-light">2</button>
+                </div>
+                <div class="btn-group" role="group" aria-label="Third group">
+                    <button type="button" class="btn bgk-a2 text-white">Sig.</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Our Work -->
+
+    <!-- Start Feature Work -->
+    <section class="bg-light py-5">
+        <div class="feature-work container my-4">
+            <div class="row d-flex d-flex align-items-center">
+                <div class="col-lg-5">
+                    <h3 class="feature-work-title h4 text-muted light-300">Adoptantes a través de la cafetería</h3>
+                    <h1 class="feature-work-heading h2 py-3 bold-700 oscuro">Pasos para adoptar:</h1>
+                    <p class="feature-work-body text-a1 light-300">
+1. Debes llenar un formulario de adopción, asi podrán analizar tu perfil si es acorde a lo que el gato necesita. <br> <br>
+2. Si el perfil es acorde entonces se hace un proceso de adopción verificando que cumplas con todos los requerimientos. Con las visitas realizadas a su espacio y viendo el feeling de los posibles adoptantes, agilizamos el proceso. <br> <br>
+3. Por último, pedimos un aporte de un bulto de comida de las que nosotros les damos al gato y un bulto de arena de 25 kg que cubre los gastos para ser entregado ya castrado, desparacitado y vacunado, asi se le dará la oportunidad a otros gatos para ser adoptados. <br> <br>
+Si tienes alguna duda puedes llamar al -3438-458595-
+</p>
+                </div>
+                <div class="col-lg-6 offset-lg-1 align-left">
+                    <div class="row">
+                        <a class="col" data-type="image" data-fslightbox="gallery" href="./assets/img/exp1-.jpg">
+                            <img class="img-fluid" src="./assets/img/exp1-.jpg">
+                        </a>
+                        <a class="col" data-type="image" data-fslightbox="gallery" href="./assets/img/exp2.jpg">
+                            <img class="img-fluid" src="./assets/img/exp2.jpg">
+                        </a>
+                    </div>
+                    <div class="row pt-4">
+                        <a class="col" data-type="image" data-fslightbox="gallery" href="./assets/img/exp3.jpg">
+                            <img class="img-fluid" src="./assets/img/exp3.jpg">
+                        </a>
+                        <a class="col" data-type="image" data-fslightbox="gallery" href="./assets/img/exp4.jpg">
+                            <img class="img-fluid" src="./assets/img/exp4.jpg">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Feature Work -->
+
+
+   <!-- Start Footer -->
+   <footer class="bgk-m1 pt-4">
+    <div class="container">
+      <div class="row py-4">
+        <div class="col-lg-3 col-12 align-left">
+          <a class="navbar-brand" href="index.html">
+            <img
+              src="/assets/img/iconos.ico/android-icon-144x144.png"
+              alt="kitty-icono" style="height: 70px; width: auto;"
+            />
+            <span class="f2 h4 font-nerko align-middle">CAT</span
+            ><span class="f3 h4 font-nerko align-middle">fé</span></a
+          >
+          <p class="text-dark bold-700 my-lg-4 my-2">
+            Cafetería que cuenta con gatos para adoptar en sus
+            establecimientos. Recaudaciones para gastos en veterinaria,
+            comida, accesorios etc.
+          </p>
+          <ul class="list-inline footer-icons light-300">
+            <li class="list-inline-item m-0">
+              <a
+                class="text-dark"
+                target="_blank"
+                href="http://facebook.com/"
+              >
+                <i class="bx bxl-facebook-square bx-md"></i>
+              </a>
+            </li>
+            <li class="list-inline-item m-0">
+              <a
+                class="text-dark"
+                target="_blank"
+                href="https://www.linkedin.com/"
+              >
+                <i class="bx bxl-linkedin-square bx-md"></i>
+              </a>
+            </li>
+            <li class="list-inline-item m-0">
+              <a
+                class="text-dark"
+                target="_blank"
+                href="https://www.whatsapp.com/"
+              >
+                <i class="bx bxl-whatsapp-square bx-md"></i>
+              </a>
+            </li>
+            <li class="list-inline-item m-0">
+              <a
+                class="text-dark"
+                target="_blank"
+                href="https://www.flickr.com/"
+              >
+                <i class="bx bxl-flickr-square bx-md"></i>
+              </a>
+            </li>
+            <li class="list-inline-item m-0">
+              <a
+                class="text-dark"
+                target="_blank"
+                href="https://www.medium.com/"
+              >
+                <i class="bx bxl-medium-square bx-md"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-4 my-sm-0 mt-4">
+          <h3 class="h4 pb-lg-3 text-body regular-400">Nuestros Servicios</h3>
+          <ul class="list-unstyled oscuro light-300">
+            <li class="pb-2">
+              <i class="bx-fw bx bxs-chevron-right bx-xs"></i
+              ><a class="text-decoration-none text-body" href="index.html"
+                >Inicio</a
+              >
+            </li>
+            <li class="pb-2">
+              <i class="bx-fw bx bxs-chevron-right bx-xs"></i
+              ><a
+                class="text-decoration-none text-body py-1"
+                href="about.html"
+                >Nosotros</a
+              >
+            </li>
+            <li class="pb-2">
+              <i class="bx-fw bx bxs-chevron-right bx-xs"></i
+              ><a class="text-decoration-none text-body py-1" href="work.html"
+                >Adopciones</a
+              >
+            </li>
+            <li class="pb-2">
+              <i class="bx-fw bx bxs-chevron-right bx-xs"></i
+              ><a
+                class="text-decoration-none text-body py-1"
+                href="pricing.html"
+                >Precios</a
+              >
+            </li>
+            <li class="pb-2">
+              <i class="bx-fw bx bxs-chevron-right bx-xs"></i
+              ><a
+                class="text-decoration-none text-body py-1"
+                href="contact.html"
+                >Contactos</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-4 my-sm-0 mt-4">
+          <h2 class="h4 pb-lg-3 text-body regular-400">Sucursales</h2>
+          <ul class="list-unstyled oscuro light-300">
+            <li class="pb-2">
+              <i class="bx-fw bx bxs-chevron-right bx-xs"></i
+              ><a class="text-decoration-none text-body py-1" href="#"
+                >Argentina</a
+              >
+            </li>
+            <li class="pb-2">
+              <i class="bx-fw bx bxs-chevron-right bx-xs"></i
+              ><a class="text-decoration-none text-body py-1" href="#"
+                >México</a
+              >
+            </li>
+            <li class="pb-2">
+              <i class="bx-fw bx bxs-chevron-right bx-xs"></i
+              ><a class="text-decoration-none text-body py-1" href="#"
+                >España</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-4 my-sm-0 mt-4">
+          <h2 class="h4 pb-lg-3 text-body regular-400">Atendemos en:</h2>
+          <ul class="list-unstyled text-body light-300">
+            <li class="pb-2">
+              <i class="bx-fw bx bx-phone bx-xs"></i
+              ><a
+                class="text-decoration-none text-body py-1"
+                href="tel:010-020-0340"
+                >3438-458595</a
+              >
+            </li>
+            <li class="pb-2">
+              <i class="bx-fw bx bx-mail-send bx-xs"></i
+              ><a
+                class="text-decoration-none text-body py-1"
+                href="mailto:info@company.com"
+                >adoptaungato@catfe.com</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="w-100 bgk-m2 py-3">
+      <div class="container">
+        <div class="row pt-2">
+          <div class="col-lg-6 col-sm-12">
+            <p class="text-lg-start text-center text-light light-300">
+              © Copyright 2021 CAT-fé. Todos los derechos reservados.
+            </p>
+          </div>
+          <div class="col-lg-6 col-sm-12">
+            <p class="text-lg-end text-center text-light light-300">
+              Diseñado por
+              <a
+                rel="sponsored"
+                class="text-decoration-none text-light"
+                href="https://cursophp.com.ar/"
+                target="_blank"
+                ><strong>Indira CAC FullStack</strong></a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+    <!-- End Footer -->
+
+
+
+    <!-- Bootstrap -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- Lightbox -->
+    <script src="assets/js/fslightbox.js"></script>
+    <script>
+        fsLightboxInstances['gallery'].props.loadOnlyCurrentSource = true;
+    </script>
+    <!-- Load jQuery require for isotope -->
+    <script src="assets/js/jquery.min.js"></script>
+    <!-- Isotope -->
+    <script src="assets/js/isotope.pkgd.js"></script>
+    <!-- Page Script -->
+    <script>
+        $(window).load(function() {
+            // init Isotope
+            var $projects = $('.projects').isotope({
+                itemSelector: '.project',
+                layoutMode: 'fitRows'
+            });
+            $(".filter-btn").click(function() {
+                var data_filter = $(this).attr("data-filter");
+                $projects.isotope({
+                    filter: data_filter
+                });
+                $(".filter-btn").removeClass("active");
+                $(".filter-btn").removeClass("shadow");
+                $(this).addClass("active");
+                $(this).addClass("shadow");
+                return false;
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>

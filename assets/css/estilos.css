@@ -1,0 +1,320 @@
+/*
+---------------------------------------------
+Índice
+------------------------------------------------
+1. Typography
+2. Main Nav
+3. Home
+4. About
+5. Work
+6. Single Work
+7. Pricing
+8. Contact
+--------------------------------------------- */
+
+/* Colores */
+.primario {color: #eda751;
+}
+.secundario {color: #78cfc0;
+}
+.secundario2{
+  color: #5C9E92;
+}
+.oscuro {color: #9c6657;
+}
+.rosa{color: #ff91ab;
+}
+.f1 { color: #ffdc9c;
+}
+.f2{
+  color:#000;
+}
+.f3 {
+  color: #0009;
+}
+
+html {
+  font-family: 'Ubuntu', sans-serif;
+}
+/* Typography */
+p,
+a {
+  font-weight: 400;
+  text-decoration: none;
+}
+.h2 {
+  font-size: 40px;
+}
+.h3 {
+  font-size: 28px;
+}
+.light-300 {
+  font-family: 'Ubuntu', sans-serif !important;
+  font-weight: 300;
+}
+.regular-400 {
+  font-family: 'Ubuntu', sans-serif !important;
+  font-weight: 400;
+}
+.bold-700 {
+  font-family: 'Ubuntu', sans-serif !important;
+  font-weight: 600;
+}
+.font-nerko {
+  font-family: 'Nerko One', cursive;
+  font-size: 50px;
+}
+.typo-space-line::after,
+.typo-space-line-center::after {
+  content: '';
+  width: 150px;
+  display: block;
+  position: absolute;
+  border-bottom: 5px solid #ffdc9c;
+  padding-top: 0.5em;
+}
+.typo-space-line-center::after {
+  left: 50%;
+  margin-left: -75px;
+}
+.typo2-space-line::after,
+.typo2-space-line-center::after {
+  content: '';
+  width: 150px;
+  display: block;
+  position: absolute;
+  border-bottom: 5px solid #ff91ab;
+  padding-top: 0.5em;
+}
+.typo2-space-line-center::after {
+  left: 50%;
+  margin-left: -75px;
+}
+/* Colores navBar */
+.btn-color-nav:hover {
+  background-color: #ff91ab;
+}
+.icono-color {
+  color: #9c6657;
+}
+.bgk-sucursales {
+  background-color: #78cfc0;
+}
+.btn-color-sucursales {
+  background-color:#5C9E92;
+}
+.btn-color-sucursales:hover {
+  background-color:#9c6657;
+}
+.btn-color-sucursales:focus {
+  background-color:#9c6657 ;
+}
+
+.bgk-reglas{
+  background-color: #ffdc9c;
+}
+.bgk-color-s2 {
+  background-color:#5C9E92;
+}
+
+.bgk-m1 {
+  background-color:#d7ad9d;
+}
+.bgk-m2 {
+  background-color:#946659;
+}
+.bgk-m3 {
+  background-color: #ffe0db ;
+}
+.bgk-a1 {
+  background-color: #D0D1D5;
+}
+.text-a1 {
+ color:#002a29;
+}
+.bgk-a2 {
+ background-color:#002a29;
+}
+.bgk-a3 {
+  background-color: #ff91ab;
+}
+
+/* Main Nav */
+#main_nav .nav-item .nav-link:hover {
+  color: #fff;
+}
+/* Home */
+#index_banner {
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)) ,url('./../img/banner02.jpg');
+  background-position: center center;
+  background-size: cover;
+  height: 100%;
+  min-height: 60vh;
+  width: 100%;
+  background-attachment: fixed;
+}
+
+#index_banner .carousel-item {
+  min-height: 60vh;
+}
+#index_banner .carousel-control-prev i,
+#index_banner .carousel-control-next i {
+  color: #ffdc9c !important;
+  text-decoration: none;
+  font-size: 4em;
+}
+#index_banner .carousel-inner {
+  height: 80vh;
+}
+#index_banner .carousel-indicators li,
+#index_banner .carousel-indicators.active {
+  background-color: #ffdc9c !important;
+  /* las rayas de abajo del carrousel van de color azul */
+}
+.service-wrapper .service-footer {
+  max-width: 720px;
+}
+.service-work.card {
+  border-radius: 10px !important;
+  cursor: pointer;
+}
+.service-work .service-work-vertical {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 33.33%,
+    rgba(255, 255, 255, 0) 99.99%
+  );
+  background-size: 300% 300%;
+  background-position: 0% 100%;
+  transition: 0.5s;
+}
+.service-work .service-work-vertical:hover {
+  background-position: 0% 0%;
+  transition: 0.5s;
+}
+.service-work .service-work-vertical:hover * {
+  color: #000;
+  border-color: #fff;
+  transition: 0.5s;
+}
+
+
+
+.recent-work.card {
+  border-radius: 10px !important;
+}
+.recent-work .recent-work-vertical {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0) 33.333%,
+    rgba(255, 255, 255, 0) 99.999%
+  );
+  background-size: 300% 300%;
+  background-position: 0% 100%;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.recent-work .recent-work-vertical:hover {
+  background-position: 0% 0%;
+  transition: 0.5s;
+}
+.recent-work .recent-work-vertical:hover div.recent-work-content {
+  top: 50%;
+  margin-top: -2.5em;
+  position: absolute;
+}
+.recent-work .recent-work-vertical:hover * {
+  color: #000;
+  transition: 0.5s;
+  background-color: #ff91ab;
+}
+
+
+/* About */
+#work_banner {
+  background-image: url('./../img/banner-bg-001.jpeg');
+  background-position: bottom;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100%;
+  width: 100%;
+}
+.progress {
+  height: 8px;
+}
+.objective-icon {
+  border-radius: 5px;
+  width: 15rem;
+}
+.partner-wap {
+  background-color: #ff91ab;
+  transition: 1s;
+  cursor: pointer;
+  border: none;
+}
+.partner-wap:hover {
+  background-color: #5C9E92;
+}
+.why-us {
+  background: rgb(239, 239, 253);
+  background: -moz-linear-gradient(
+    0deg,
+    rgba(239, 239, 253, 1) 50%,
+    rgba(255, 255, 255, 1) 50%
+  );
+  background: -webkit-linear-gradient(
+    0deg,
+    rgba(239, 239, 253, 1) 50%,
+    rgba(255, 255, 255, 1) 50%
+  );
+  background: linear-gradient(
+    0deg,
+    rgba(239, 239, 253, 1) 50%,
+    rgba(255, 255, 255, 1) 50%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#efeffd",endColorstr="#ffffff",GradientType=1);
+}
+.team-member-img {
+  transition-duration: 0.15s;
+}
+.team-member:hover .team-member-img {
+  padding: 10px !important;
+}
+
+/* Work */
+/* Singel Work */
+#work_single_banner {
+  background-image: url('./../img/banner-bg-02.jpg');
+  background-position: center center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+.related-content {
+  border-radius: 20px;
+  cursor: pointer;
+}
+/* Pricing */
+.pricing-list {
+  margin-bottom: 1px;
+}
+.pricing-table {
+  max-width: 350px;
+  margin: auto;
+}
+.pricing-table,
+.pricing-horizontal {
+  border-radius: 15px !important;
+}
+/* Contact */
+#floatingtextarea {
+  height: 150px;
+}
+/* Footer */
+footer a.text-light:hover {
+  color: #bfbfbf !important;
+  transition-duration: 0.15s;
+}
