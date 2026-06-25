@@ -1,0 +1,23 @@
+[
+  {
+    "id": "luna",
+    "nombre": "Luna",
+    "edad": "2 anios",
+    "sucursal": "Argentina",
+    "personalidad": "Tranquila y sociable"
+  },
+  {
+    "id": "milo",
+    "nombre": "Milo",
+    "edad": "1 anio",
+    "sucursal": "Mexico",
+    "personalidad": "Jugueton y curioso"
+  },
+  {
+    "id": "nina",
+    "nombre": "Nina",
+    "edad": "3 anios",
+    "sucursal": "Espana",
+    "personalidad": "Cariniosa y companiera"
+  }
+]

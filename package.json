@@ -1,0 +1,9 @@
+{
+  "name": "catfe",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sitio CATfe con funciones serverless para reservas.",
+  "dependencies": {
+    "@netlify/blobs": "^9.1.0"
+  }
+}
