@@ -2,22 +2,22 @@
   {
     "id": "luna",
     "nombre": "Luna",
-    "edad": "2 anios",
+    "edad": "2 años",
     "sucursal": "Argentina",
     "personalidad": "Tranquila y sociable"
   },
   {
     "id": "milo",
     "nombre": "Milo",
-    "edad": "1 anio",
-    "sucursal": "Mexico",
-    "personalidad": "Jugueton y curioso"
+    "edad": "1 año",
+    "sucursal": "México",
+    "personalidad": "Juguetón y curioso"
   },
   {
     "id": "nina",
     "nombre": "Nina",
-    "edad": "3 anios",
-    "sucursal": "Espana",
-    "personalidad": "Cariniosa y companiera"
+    "edad": "3 años",
+    "sucursal": "España",
+    "personalidad": "Cariñosa y compañera"
   }
 ]

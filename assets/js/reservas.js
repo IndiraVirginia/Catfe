@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function renderReservations(reservas) {
     if (!reservas.length) {
-      tableBody.innerHTML = '<tr><td colspan="7" class="text-muted">Todavia no hay reservas registradas.</td></tr>';
+      tableBody.innerHTML = '<tr><td colspan="7" class="text-muted">Todavía no hay reservas registradas.</td></tr>';
       return;
     }
 

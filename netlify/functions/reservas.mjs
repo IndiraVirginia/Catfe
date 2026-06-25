@@ -34,7 +34,7 @@ function validateReservation(reservation) {
   }
 
   if (!reservation.email.includes('@')) {
-    return 'El email no tiene un formato valido.';
+    return 'El email no tiene un formato válido.';
   }
 
   return null;
@@ -88,5 +88,5 @@ export default async (request) => {
     return createJsonResponse({ reserva: savedReservation }, 201);
   }
 
-  return createJsonResponse({ error: 'Metodo no permitido.' }, 405);
+  return createJsonResponse({ error: 'Método no permitido.' }, 405);
 };
