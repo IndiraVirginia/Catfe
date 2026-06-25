@@ -1,0 +1,8 @@
+# Local Netlify folder
+.netlify
+
+# Local dependencies
+node_modules/
+
+# Local QA artifacts
+output/
