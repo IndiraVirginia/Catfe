@@ -5,11 +5,11 @@
 **Nombre del sitio:** CATfé  
 **URL publicada:** https://catfeteriagato.netlify.app/  
 **Autora:** Indira Rueda  
-**Tipo de proyecto:** sitio web institucional con funcionalidad dinámica y backend serverless.
+**Tipo de proyecto:** sitio web institucional con funcionalidad dinámica de reservas.
 
 ## Tema del sitio
 
-CATfé es una cafetería temática orientada al bienestar animal. El sitio presenta información institucional, sucursales, reglas de convivencia, gatos disponibles para adopción, planes de donación, contacto y reservas para visitas o entrevistas de adopción.
+CATfé es una cafetería temática orientada al bienestar animal. El sitio presenta información institucional, sucursales, reglas de convivencia, gatos disponibles para adopción, planes de donación, contacto y reservas para visitas, entrevistas de adopción o consultas relacionadas con donaciones.
 
 La temática permite integrar contenido informativo, navegación entre secciones, imágenes, formularios, tablas, interactividad y una funcionalidad dinámica relacionada con reservas.
 
@@ -22,7 +22,7 @@ El objetivo del sitio es brindar una experiencia clara para usuarios interesados
 - Ver reglas generales de convivencia con los gatos.
 - Informarse sobre adopciones responsables.
 - Realizar donaciones.
-- Registrar reservas o entrevistas de adopción.
+- Registrar reservas, entrevistas de adopción o consultas por donaciones.
 - Contactarse con el equipo de CATfé.
 
 ## Estructura del sitio
@@ -33,7 +33,7 @@ El proyecto está compuesto por varias páginas HTML:
 - `nosotros.html`: presentación del equipo, misión, visión y objetivos.
 - `adopciones.html`: gatos disponibles y pasos para adoptar.
 - `donaciones.html`: membresías, donaciones particulares y merchandising.
-- `reservas.html`: formulario de reservas conectado al backend.
+- `reservas.html`: formulario para reservas, entrevistas de adopción y consultas por donaciones.
 - `contacto.html`: datos de contacto y formulario de consulta.
 
 Además, el sitio incluye carpetas de recursos:
@@ -220,4 +220,3 @@ Esto permite explicar tanto el armado visual del sitio como la separación entre
 ## Conclusión
 
 CATfé cumple con los requisitos de la consigna y agrega una funcionalidad adicional de backend serverless. El sitio presenta una temática clara, navegación completa, contenido visual, formularios, tablas, efectos interactivos y publicación en Netlify.
-

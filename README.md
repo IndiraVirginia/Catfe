@@ -1,6 +1,6 @@
 # CATfé
 
-CATfé es un sitio web institucional para una cafetería temática con gatos, adopciones responsables, donaciones y reservas de visitas. El proyecto fue actualizado como entrega de Proyecto Final para tecnicatura, incorporando navegación completa, secciones informativas, interactividad, diseño adaptable y un pequeño backend serverless.
+CATfé es un sitio web institucional para una cafetería temática con gatos, adopciones responsables, donaciones y reservas de visitas. El proyecto fue actualizado como entrega de Proyecto Final para tecnicatura, incorporando navegación completa, secciones informativas, interactividad, diseño adaptable y una funcionalidad dinámica de reservas.
 
 ## Sitio publicado
 
@@ -41,7 +41,7 @@ https://catfeteriagato.netlify.app/
 - Galería e imágenes clickeables.
 - Rollovers de imágenes.
 - Popups de reserva/contacto.
-- Formulario de reservas con backend serverless.
+- Formulario para reservas, entrevistas de adopción y consultas por donaciones.
 - Listado de reservas guardadas desde `/api/reservas`.
 - Diseño adaptable para escritorio y dispositivos móviles.
 
@@ -67,7 +67,7 @@ La página `reservas.html` envía los datos del formulario mediante `fetch`. La 
 - `nosotros.html`: información institucional.
 - `adopciones.html`: gatos y proceso de adopción.
 - `donaciones.html`: planes y donaciones.
-- `reservas.html`: formulario conectado al backend.
+- `reservas.html`: formulario para reservas, entrevistas de adopción y consultas.
 - `contacto.html`: formulario de contacto.
 - `assets/css/estilos.css`: estilos personalizados.
 - `assets/js/custom.js`: popups y rollovers.
@@ -78,4 +78,3 @@ La página `reservas.html` envía los datos del formulario mediante `fetch`. La 
 ## Autoría
 
 Proyecto desarrollado por Indira Rueda.
-
