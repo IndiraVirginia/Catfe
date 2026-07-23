@@ -148,10 +148,17 @@
         </section>
 
         <section class="col-lg-7">
-          <h2 class="h3 oscuro bold-700 mb-4">Reservas registradas</h2>
-          <div class="table-responsive">
-            <table class="table table-bordered table-hover align-middle text-center">
-              <thead class="bgk-color-s2 text-light">
+          <div class="reservas-panel">
+            <div class="d-flex flex-column flex-md-row justify-content-between gap-2 align-items-md-center mb-3">
+              <div>
+                <p class="reservas-kicker mb-1">Gestión de reservas</p>
+                <h2 class="h3 oscuro bold-700 mb-0">Reservas registradas</h2>
+              </div>
+              <span class="reservas-badge">Actualización automática</span>
+            </div>
+            <div class="table-responsive reservas-table-wrap">
+              <table class="table reservas-table align-middle text-center mb-0">
+                <thead>
                 <tr>
                   <th>Nombre</th>
                   <th>Fecha</th>
@@ -168,6 +175,7 @@
                 </tr>
               </tbody>
             </table>
+            </div>
           </div>
         </section>
       </div>
