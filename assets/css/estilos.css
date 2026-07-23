@@ -235,6 +235,28 @@ a {
   color: #946659 !important;
   font-style: italic;
 }
+.btn-reserva-delete {
+  align-items: center;
+  background-color: #fff7f4;
+  border: 1px solid #f4cfc5;
+  border-radius: 50%;
+  color: #9c6657;
+  display: inline-flex;
+  height: 36px;
+  justify-content: center;
+  transition: 0.2s ease-in-out;
+  width: 36px;
+}
+.btn-reserva-delete:hover,
+.btn-reserva-delete:focus {
+  background-color: #ff91ab;
+  border-color: #ff91ab;
+  color: #fff;
+  transform: translateY(-1px);
+}
+.btn-reserva-delete i {
+  font-size: 1.15rem;
+}
 
 @media (max-width: 767.98px) {
   .reservas-panel {

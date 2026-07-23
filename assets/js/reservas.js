@@ -18,9 +18,18 @@ document.addEventListener('DOMContentLoaded', function () {
     return new Date(value).toLocaleString('es-AR');
   }
 
+  function escapeHtml(value) {
+    return String(value || '')
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#039;');
+  }
+
   function renderReservations(reservas) {
     if (!reservas.length) {
-      tableBody.innerHTML = '<tr><td colspan="7" class="text-muted">Todavía no hay reservas registradas.</td></tr>';
+      tableBody.innerHTML = '<tr><td colspan="8" class="text-muted">Todavía no hay reservas registradas.</td></tr>';
       return;
     }
 
@@ -28,13 +37,18 @@ document.addEventListener('DOMContentLoaded', function () {
       .map(function (reserva) {
         return [
           '<tr>',
-          '<td>' + reserva.nombre + '</td>',
-          '<td>' + reserva.fecha + '</td>',
-          '<td>' + reserva.horario + '</td>',
-          '<td>' + reserva.sucursal + '</td>',
-          '<td>' + (reserva.gato || '-') + '</td>',
-          '<td><span class="badge bg-warning text-dark">' + reserva.estado + '</span></td>',
+          '<td>' + escapeHtml(reserva.nombre) + '</td>',
+          '<td>' + escapeHtml(reserva.fecha) + '</td>',
+          '<td>' + escapeHtml(reserva.horario) + '</td>',
+          '<td>' + escapeHtml(reserva.sucursal) + '</td>',
+          '<td>' + escapeHtml(reserva.gato || '-') + '</td>',
+          '<td><span class="badge bg-warning text-dark">' + escapeHtml(reserva.estado) + '</span></td>',
           '<td>' + formatDate(reserva.creadaEn) + '</td>',
+          '<td>',
+          '<button class="btn-reserva-delete" type="button" data-id="' + escapeHtml(reserva.id) + '" aria-label="Eliminar reserva de ' + escapeHtml(reserva.nombre) + '">',
+          '<i class="bx bx-trash"></i>',
+          '</button>',
+          '</td>',
           '</tr>',
         ].join('');
       })
@@ -49,13 +63,13 @@ document.addEventListener('DOMContentLoaded', function () {
       '<option value="">Sin preferencia</option>' +
       gatos
         .map(function (gato) {
-          return '<option value="' + gato.nombre + '">' + gato.nombre + ' - ' + gato.sucursal + '</option>';
+          return '<option value="' + escapeHtml(gato.nombre) + '">' + escapeHtml(gato.nombre) + ' - ' + escapeHtml(gato.sucursal) + '</option>';
         })
         .join('');
   }
 
   async function loadReservations() {
-    tableBody.innerHTML = '<tr><td colspan="7" class="text-muted">Cargando reservas...</td></tr>';
+    tableBody.innerHTML = '<tr><td colspan="8" class="text-muted">Cargando reservas...</td></tr>';
 
     try {
       var response = await fetch('/api/reservas');
@@ -68,7 +82,35 @@ document.addEventListener('DOMContentLoaded', function () {
       renderReservations(data.reservas || []);
     } catch (error) {
       tableBody.innerHTML =
-        '<tr><td colspan="7" class="text-danger">No se pudieron cargar las reservas del backend.</td></tr>';
+        '<tr><td colspan="8" class="text-danger">No se pudieron cargar las reservas del backend.</td></tr>';
+    }
+  }
+
+  async function deleteReservation(id) {
+    if (!id) {
+      return;
+    }
+
+    var confirmed = window.confirm('¿Eliminar esta reserva?');
+
+    if (!confirmed) {
+      return;
+    }
+
+    try {
+      var response = await fetch('/api/reservas?id=' + encodeURIComponent(id), {
+        method: 'DELETE',
+      });
+      var data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'No se pudo eliminar la reserva.');
+      }
+
+      setStatus('Reserva eliminada correctamente.', 'success');
+      await loadReservations();
+    } catch (error) {
+      setStatus(error.message, 'error');
     }
   }
 
@@ -97,6 +139,14 @@ document.addEventListener('DOMContentLoaded', function () {
       await loadReservations();
     } catch (error) {
       setStatus(error.message, 'error');
+    }
+  });
+
+  tableBody.addEventListener('click', function (event) {
+    var deleteButton = event.target.closest('.btn-reserva-delete');
+
+    if (deleteButton) {
+      deleteReservation(deleteButton.dataset.id);
     }
   });
 

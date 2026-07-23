@@ -88,5 +88,18 @@ export default async (request) => {
     return createJsonResponse({ reserva: savedReservation }, 201);
   }
 
+  if (request.method === 'DELETE') {
+    const url = new URL(request.url);
+    const id = String(url.searchParams.get('id') || '').trim();
+
+    if (!id) {
+      return createJsonResponse({ error: 'Falta el identificador de la reserva.' }, 400);
+    }
+
+    await store.delete(id);
+
+    return createJsonResponse({ ok: true });
+  }
+
   return createJsonResponse({ error: 'Método no permitido.' }, 405);
 };
