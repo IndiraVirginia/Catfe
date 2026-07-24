@@ -97,6 +97,31 @@ a {
 .icono-color {
   color: #9c6657;
 }
+.navbar-brand {
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+.navbar-brand:hover {
+  filter: drop-shadow(0 8px 12px rgba(156, 102, 87, 0.18));
+  transform: translateY(-2px) scale(1.02);
+}
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+.scroll-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.scroll-reveal:nth-child(2) {
+  transition-delay: 0.08s;
+}
+.scroll-reveal:nth-child(3) {
+  transition-delay: 0.14s;
+}
+.scroll-reveal:nth-child(4) {
+  transition-delay: 0.2s;
+}
 .bgk-sucursales {
   background-color: #78cfc0;
 }
@@ -481,13 +506,22 @@ a {
   filter: brightness(0) invert(1);
 }
 @media (prefers-reduced-motion: reduce) {
+  .navbar-brand,
+  .scroll-reveal,
   .pricing-membership-card {
     transition: none;
   }
 
+  .navbar-brand:hover,
+  .scroll-reveal,
+  .scroll-reveal.is-visible,
   .pricing-membership-card.is-selected,
   .pricing-membership-card:hover {
     transform: none;
+  }
+
+  .scroll-reveal {
+    opacity: 1;
   }
 }
 .pricing-table,
