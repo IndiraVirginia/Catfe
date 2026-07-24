@@ -25,6 +25,8 @@ document.addEventListener('DOMContentLoaded', function () {
       var card = item.querySelector('[data-membership-card]');
       var isSelected = item === selectedItem;
 
+      item.classList.toggle('membership-card-center', isSelected);
+      item.classList.toggle('membership-card-side', !isSelected);
       card.classList.toggle('is-selected', isSelected);
       card.setAttribute('aria-pressed', isSelected ? 'true' : 'false');
     });
