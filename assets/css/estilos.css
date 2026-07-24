@@ -428,21 +428,25 @@ a {
   max-width: 350px;
   margin: auto;
 }
-.membership-card-column {
-  transition: margin-top 0.25s ease, padding-bottom 0.25s ease, transform 0.25s ease;
-}
-.membership-card-side {
-  margin-top: 3rem;
-  padding-bottom: 3rem;
-}
-.membership-card-center {
-  margin-top: 0;
-  padding-bottom: 0;
+.membership-cards-row {
+  align-items: stretch;
 }
 .pricing-membership-card {
   border-radius: 18px !important;
   cursor: pointer;
+  min-height: 430px;
   transition: background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
+.pricing-membership-card .card-body {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+.pricing-membership-card ul {
+  max-width: 280px;
+  width: 100%;
 }
 .pricing-membership-card.is-selected {
   background-color: #fff7f4 !important;
@@ -454,7 +458,6 @@ a {
 .pricing-membership-card:hover {
   background-color: #9C6657 !important;
   box-shadow: 0 20px 42px rgba(148, 102, 89, 0.28) !important;
-  transform: scale(1.04);
   z-index: 2;
 }
 .pricing-membership-card.is-selected:hover {
@@ -478,7 +481,6 @@ a {
   filter: brightness(0) invert(1);
 }
 @media (prefers-reduced-motion: reduce) {
-  .membership-card-column,
   .pricing-membership-card {
     transition: none;
   }
@@ -486,13 +488,6 @@ a {
   .pricing-membership-card.is-selected,
   .pricing-membership-card:hover {
     transform: none;
-  }
-}
-@media (max-width: 767.98px) {
-  .membership-card-side,
-  .membership-card-center {
-    margin-top: 1rem;
-    padding-bottom: 1rem;
   }
 }
 .pricing-table,
