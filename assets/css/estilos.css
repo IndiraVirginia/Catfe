@@ -134,6 +134,70 @@ a {
 .btn-color-sucursales:focus {
   background-color:#9c6657 ;
 }
+.sucursales-map-panel {
+  background: linear-gradient(180deg, #fff7f4 0%, #ffffff 100%);
+  border: 1px solid #ffe0db;
+  border-radius: 18px;
+  box-shadow: 0 16px 36px rgba(148, 102, 89, 0.16);
+  padding: 1.25rem;
+}
+.sucursales-list {
+  display: flex;
+  flex-direction: column;
+}
+.sucursal-map-items {
+  display: grid;
+  gap: 0.8rem;
+}
+.sucursal-map-item {
+  background-color: #fff;
+  border: 1px solid #f4cfc5;
+  border-radius: 14px;
+  overflow: hidden;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+.sucursal-map-item.is-active {
+  border-color: #9c6657;
+  box-shadow: 0 10px 22px rgba(156, 102, 87, 0.16);
+  transform: translateY(-2px);
+}
+.sucursal-map-button {
+  background: transparent;
+  border: 0;
+  color: #5a433b;
+  display: grid;
+  padding: 0.9rem 1rem 0.45rem;
+  text-align: left;
+  width: 100%;
+}
+.sucursal-map-title {
+  color: #9c6657;
+  font-weight: 700;
+}
+.sucursal-map-address,
+.sucursal-map-schedule {
+  color: #6d5b55;
+  font-size: 0.92rem;
+}
+.sucursal-directions-link {
+  color: #5C9E92;
+  display: inline-flex;
+  font-weight: 700;
+  padding: 0 1rem 0.9rem;
+}
+.sucursal-directions-link:hover {
+  color: #9c6657;
+}
+.sucursales-map {
+  background-color: #fff;
+  border: 1px solid #f4cfc5;
+  border-radius: 14px;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.6);
+  height: 100%;
+  min-height: 430px;
+  overflow: hidden;
+  width: 100%;
+}
 
 .bgk-reglas{
   background-color: #ffdc9c;
