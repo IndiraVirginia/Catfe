@@ -251,7 +251,7 @@
             <p class="text-center pb-5 light-300">Doná por separado para cada una de las necesidades de los gatos.</p>
 
             <!-- Start Pricing Horizontal -->
-            <div class="pricing-horizontal row col-10 m-auto d-flex shadow-sm rounded overflow-hidden bg-white">
+            <div class="pricing-horizontal donation-detail-trigger row col-10 m-auto d-flex shadow-sm rounded overflow-hidden bg-white" data-donation-detail="veterinaria" role="button" tabindex="0" aria-label="Ver detalle de recaudación para veterinaria">
                 <div class="pricing-horizontal-icon col-md-3 text-center bgk-reglas text-dark py-4">
                     <img class="w-50" src="assets/img/pet-vet.png" alt="">
                     <h5 class="h5 semi-bold-600 pb-4 light-300">Veterinaria</h5>
@@ -273,7 +273,7 @@
             <!-- End Pricing Horizontal -->
 
             <!-- Start Pricing Horizontal -->
-            <div class="pricing-horizontal row col-10 m-auto d-flex shadow-sm rounded overflow-hidden my-5 bg-white">
+            <div class="pricing-horizontal donation-detail-trigger row col-10 m-auto d-flex shadow-sm rounded overflow-hidden my-5 bg-white" data-donation-detail="comida" role="button" tabindex="0" aria-label="Ver detalle de recaudación para comida">
                 <div class="pricing-horizontal-icon col-md-3 text-center bgk-reglas text-dark py-4">
                     <img class="w-50" src="assets/img/pet-food.png" alt="">
                     <h5 class="h5 semi-bold-600 pb-4 light-300">Comida</h5>
@@ -294,7 +294,7 @@
             <!-- End Pricing Horizontal -->
 
             <!-- Start Pricing Horizontal -->
-            <div class="pricing-horizontal row col-10 m-auto d-flex shadow-sm rounded overflow-hidden bg-white">
+            <div class="pricing-horizontal donation-detail-trigger row col-10 m-auto d-flex shadow-sm rounded overflow-hidden bg-white" data-donation-detail="transporte" role="button" tabindex="0" aria-label="Ver detalle de recaudación para transporte">
                 <div class="pricing-horizontal-icon col-md-3 text-center bgk-reglas text-dark py-4">
                     <img class="w-50" src="assets/img/pet-carrier.png" alt="">
                     <h5 class="h5 semi-bold-600 pb-4 light-300">Transporte</h5>
@@ -310,6 +310,28 @@
                 <div class="pricing-horizontal-tag col-md-4 text-center pt-3 d-flex align-items-center">
                     <div class="w-100 light-300">
                         <p>$150</p>
+                        <a href="contacto.html#formulario-contacto" class="btn rounded-pill px-4 btn-outline-dark mb-3">Donar</a>
+                    </div>
+                </div>
+            </div>
+            <!-- End Pricing Horizontal -->
+
+            <!-- Start Pricing Horizontal -->
+            <div class="pricing-horizontal donation-detail-trigger row col-10 m-auto d-flex shadow-sm rounded overflow-hidden my-5 bg-white" data-donation-detail="accesorios" role="button" tabindex="0" aria-label="Ver detalle de recaudación para accesorios">
+                <div class="pricing-horizontal-icon col-md-3 text-center bgk-reglas text-dark py-4">
+                    <img class="w-50" src="assets/img/pet-shop.png" alt="">
+                    <h5 class="h5 semi-bold-600 pb-4 light-300">Accesorios</h5>
+                </div>
+                <div class="pricing-horizontal-body offset-lg-1 col-md-5 col-lg-4 d-flex align-items-center ps-5 pt-lg-0 pt-4">
+                    <ul class="text-start px-4 list-unstyled mb-0 light-300">
+                        <li><i class="bx bxs-circle me-2"></i>Mantitas y camas</li>
+                        <li><i class="bx bxs-circle me-2"></i>Bandejas sanitarias</li>
+                        <li><i class="bx bxs-circle me-2"></i>Juguetes y rascadores</li>
+                    </ul>
+                </div>
+                <div class="pricing-horizontal-tag col-md-4 text-center pt-3 d-flex align-items-center">
+                    <div class="w-100 light-300">
+                        <p>$120</p>
                         <a href="contacto.html#formulario-contacto" class="btn rounded-pill px-4 btn-outline-dark mb-3">Donar</a>
                     </div>
                 </div>
@@ -403,6 +425,37 @@
 
 
     <!-- Start Footer -->
+    <div class="modal fade" id="donationDetailModal" tabindex="-1" aria-labelledby="donationDetailTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content donation-detail-modal">
+                <div class="modal-header border-0 pb-0">
+                    <div>
+                        <p class="reservas-kicker mb-1">Detalle de recaudación</p>
+                        <h2 class="modal-title h4 oscuro bold-700" id="donationDetailTitle">Categoría</h2>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="light-300" id="donationDetailDescription"></p>
+                    <div class="donation-detail-goal mb-3">
+                        <div class="d-flex justify-content-between">
+                            <span>Objetivo mensual</span>
+                            <strong id="donationDetailGoal"></strong>
+                        </div>
+                        <div class="progress mt-2">
+                            <div class="progress-bar donation-detail-progress" id="donationDetailProgress" role="progressbar" aria-label="Progreso de recaudación"></div>
+                        </div>
+                    </div>
+                    <ul class="donation-detail-list light-300" id="donationDetailItems"></ul>
+                </div>
+                <div class="modal-footer border-0 pt-0">
+                    <a class="btn rounded-pill px-4 btn-outline-dark" href="contacto.html#formulario-contacto">Quiero ayudar</a>
+                    <button type="button" class="btn rounded-pill px-4 btn-dark" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <footer class="bgk-m1 pt-4">
         <div class="container">
           <div class="row py-4">
@@ -591,6 +644,7 @@
     <!-- Bootstrap -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/donaciones.js"></script>
+    <script src="assets/js/recaudaciones.js"></script>
     <script src="assets/js/animaciones.js"></script>
 
 
