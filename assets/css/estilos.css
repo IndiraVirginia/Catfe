@@ -457,6 +457,9 @@ a {
   transform: scale(1.04);
   z-index: 2;
 }
+.pricing-membership-card.is-selected:hover {
+  transform: scale(1.06);
+}
 .pricing-membership-card:hover h2,
 .pricing-membership-card:hover p,
 .pricing-membership-card:hover li,
