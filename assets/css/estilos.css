@@ -148,12 +148,14 @@ a {
 .sucursal-map-items {
   display: grid;
   gap: 0.8rem;
+  max-height: 430px;
+  overflow-y: auto;
+  padding-right: 0.35rem;
 }
 .sucursal-map-item {
   background-color: #fff;
   border: 1px solid #f4cfc5;
   border-radius: 14px;
-  overflow: hidden;
   transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
 }
 .sucursal-map-item.is-active {
@@ -166,6 +168,7 @@ a {
   border: 0;
   color: #5a433b;
   display: grid;
+  gap: 0.12rem;
   padding: 0.9rem 1rem 0.45rem;
   text-align: left;
   width: 100%;
@@ -173,6 +176,13 @@ a {
 .sucursal-map-title {
   color: #9c6657;
   font-weight: 700;
+}
+.sucursal-map-country {
+  color: #5C9E92;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-top: 0.1rem;
+  text-transform: uppercase;
 }
 .sucursal-map-address,
 .sucursal-map-schedule {
@@ -197,6 +207,11 @@ a {
   min-height: 430px;
   overflow: hidden;
   width: 100%;
+}
+.service-work.is-active {
+  box-shadow: 0 18px 36px rgba(156, 102, 87, 0.32) !important;
+  outline: 3px solid #ffdc9c;
+  transform: translateY(-3px);
 }
 
 .bgk-reglas{
