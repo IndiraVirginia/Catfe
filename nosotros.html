@@ -388,12 +388,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 mx-auto my-4 p-3">
-                    <form action="#" method="get"><h1 class="h2 text-center">Suscribite para recibir descuentos especiales en la cafetería.</h1>
+                    <form id="newsletter-form" action="#" method="post"><h1 class="h2 text-center">Suscribite para recibir descuentos especiales en la cafetería.</h1>
                     <div class="input-group py-3">
 
-                        <input name="email" type="mail" class="form-control form-control-lg rounded-pill rounded-end" id="email" placeholder="Tu Email" aria-label="Tu Email" required>
+                        <input name="email" type="email" class="form-control form-control-lg rounded-pill rounded-end" id="newsletter-email" placeholder="Tu Email" aria-label="Tu Email" required>
                         <button class="btn bgk-color-s2 text-white btn-lg rounded-pill rounded-start px-lg-4" type="submit">Suscribirte</button>
                     </div>
+                    <div id="newsletter-status" class="alert d-none" role="alert"></div>
                     <p class="text-center light-300">Enviamos descuentos a través del email, novedades y más.</p>
                     </form>
                 </div>
@@ -589,6 +590,7 @@
 
     <!-- Bootstrap -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/newsletter.js"></script>
 
 
 </body>

@@ -6,3 +6,8 @@
   from = "/api/reservas"
   to = "/.netlify/functions/reservas"
   status = 200
+
+[[redirects]]
+  from = "/api/newsletter"
+  to = "/.netlify/functions/newsletter"
+  status = 200
