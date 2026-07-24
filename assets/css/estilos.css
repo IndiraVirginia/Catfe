@@ -428,6 +428,37 @@ a {
   max-width: 350px;
   margin: auto;
 }
+.pricing-membership-card {
+  border-radius: 18px !important;
+  cursor: pointer;
+  transition: background-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
+.pricing-membership-card:hover {
+  background-color: #9C6657 !important;
+  box-shadow: 0 20px 42px rgba(148, 102, 89, 0.28) !important;
+  transform: scale(1.04);
+  z-index: 2;
+}
+.pricing-membership-card:hover h2,
+.pricing-membership-card:hover p,
+.pricing-membership-card:hover li,
+.pricing-membership-card:hover i {
+  color: #fff !important;
+}
+.pricing-membership-card:hover .btn {
+  border-color: #fff;
+  color: #fff;
+}
+.pricing-membership-card:hover .btn:hover {
+  background-color: #fff;
+  color: #9C6657;
+}
+.pricing-membership-card:hover img {
+  filter: brightness(0) invert(1);
+}
+.pricing-membership-card-featured:hover {
+  background-color: #946659 !important;
+}
 .pricing-table,
 .pricing-horizontal {
   border-radius: 15px !important;
